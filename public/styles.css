@@ -17,6 +17,17 @@ header {
     align-items: center;
 }
 
+.searchInput {
+    width: 200px;
+    height: 30px;
+    margin: 5px;
+}
+
+.searchButton {
+    margin-right: 10px ;
+    height: 36px;
+}
+
 footer {
     position: relative;
     text-align: center;
@@ -68,7 +79,8 @@ footer {
     margin: 1rem;
     border: 2px solid;
     background-color: transparent;
-    transition: background 200ms ease-in, color 200ms ease-in;
+    transition: 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
     
 }
 
