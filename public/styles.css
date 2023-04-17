@@ -1,5 +1,82 @@
 * {
-    font-family: 'Playfair Display', serif;
+    
     background-color: rgb(234, 221, 201);
 }
 
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 2rem;
+}
+
+header {
+    color: black;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.productCard {
+    overflow: hidden;
+    box-shadow: 0 2px 20px lightgray;
+    border-radius: radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition:transform 200ms ease-in;
+    background-color: white;
+}
+
+.cardImg {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardTitle {
+    background-color: white;
+    padding: 1rem;
+}
+
+.cardDescription {
+    background-color: white;
+    padding: 0 1rem;
+}
+
+.cardButton {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid;
+    background-color: transparent;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    
+}
+
+.productCard:hover {
+    transform: scale(1.02);
+}
+
+.cardButton:hover {
+    background-color: black;
+    color: white;
+}

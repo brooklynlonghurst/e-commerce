@@ -1,9 +1,12 @@
 import React from "react"
 
 function Header(){
-    <div>
-        <h1>The Shop</h1>
+   return (
+    <div className="header">
+        <input placeholder="What're You Looking For?"/>
+        <button>Search</button>
     </div>
+   )
 }
 
 export default Header
