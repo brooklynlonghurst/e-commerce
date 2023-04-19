@@ -10,10 +10,6 @@ body {
 
 header {
     color: black;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -91,4 +87,22 @@ footer {
 .cardButton:hover {
     background-color: black;
     color: white;
+}
+
+.myDogsButton {
+    height: 36px;
+
+}
+
+.homeButton {
+    height: 36px;
+}
+
+.row-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-end;
 }
