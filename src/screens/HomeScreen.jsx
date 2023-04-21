@@ -10,17 +10,27 @@ function HomeScreen() {
         setSearch(event.target.value.toLowerCase())
     }
 
+    
     useEffect(() => {
-        axios
-            .get(`https://dog.ceo/api/breeds/list/all`)
+        const url = "https://api.api-ninjas.com/v1/dogs?name=dog";
+        const config = {
+            headers: {"X-Api-Key" : process.env.REACT_APP_API_KEY}
+          };
+
+        axios.get(url, config)
             .then((res) => {
-                let newState = res.data.results.map((item, index) => {
-                    item.img = `https://dog.ceo/api/${index + 1}/image/random`
+                console.log(res)
+                let newState = res.data.map((item, index) => {
+                    console.log(item)
                     return item
                 })
                 setDogs(newState)
+            }).catch((err) => {
+                console.log(err)
             })
     }, [])
+
+    
 
     const dogDisplay = dogs
     .filter((dog, index) => {
@@ -32,7 +42,7 @@ function HomeScreen() {
 
     return (
         <div>
-            <h1>Home</h1>
+            <h2>Home</h2>
             <input className="searchInput" placeholder="Search by Breed" onChange={handleSearch}/>
             {dogDisplay}
         </div>

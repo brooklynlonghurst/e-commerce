@@ -4,7 +4,7 @@ function ProductCard(props){
     return (
         <div className="wrapper">
             <div className="productCard">
-                <img className="cardImg" src={props.dog.img} alt="img"/>
+                <img className="cardImg" src={props.dog.image_link} alt="img"/>
                 <h5 className="cardTitle">{props.dog.name}</h5>
                 <button className="cardButton">Adopt This Dog</button>
             </div>

@@ -2,7 +2,7 @@ import React from "react"
 
 function MyDogsScreen() {
     return (
-        <h1>My Dogs</h1>
+        <h2>My Dogs</h2>
     )
 }
 
